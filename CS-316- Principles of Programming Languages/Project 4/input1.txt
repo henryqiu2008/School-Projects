@@ -1,0 +1,111 @@
+class Pair
+{
+	first
+	second
+}
+
+class List
+{
+	data
+	tailList
+}
+
+class BinTree
+{
+	data
+	leftSubTree
+	rightSubTree
+}
+
+class Test
+{
+}
+
+class Point
+{
+	x
+	y
+}
+
+class Line
+{
+	p1
+	p2
+}
+
+class Rectangle
+{
+	p1
+	p2
+}
+
+((examplePair) (Pair (Pair 1 2) (Pair 3 4)))
+
+((exampleList) (List 1 (List 2 (List 3 null))))
+
+((exampleBinTree) (BinTree 1 (BinTree 2 null null) (BinTree 3 null null)))
+
+((buildList i) (if (= i 0) null
+                   (List i (buildList (- i 1)))
+               )
+)
+
+((listLength list)
+	(if (= list null) 0
+	    (+ 1 (listLength (tailList list)))
+	)
+)
+
+((sumList list)
+	(if (= list null) 0
+	    (+ (data list) (sumList (tailList list)))
+	)
+)
+
+((max x y) (if (>= x y) x y))
+
+((binTreeHeight bt)
+	(if (= bt null) 0
+	    (+ 1 (max (binTreeHeight (leftSubTree bt)) (binTreeHeight (rightSubTree bt))))
+	)
+)
+
+((sumBinTree bt)
+	(if (= bt null) 0
+	    (+ (data bt) (sumBinTree (leftSubTree bt)) (sumBinTree (rightSubTree bt)))
+	)
+)
+
+((exampleLine) (Line (Point 3.4 7.5) (Point 5.98 12.321)))
+
+((line1) (Line (Point 12 24) (Point 15 28)))
+
+((line2) (Line (Point 0 0) (Point 3 4)))
+
+((line3) (Line (Point 1 1) (Point 4 5)))
+
+((exampleRectangle) (Rectangle (Point 3.4 7.5) (Point 5.98 12.321)))
+
+((squareRoot x) (sqrtNewton 1.0 x))
+
+((sqrtNewton val x)
+	(if (closeEnough val x) val
+	    (sqrtNewton (improve val x) x)
+	)
+)
+
+((closeEnough val x) (< (abs (- (square val) x)) 0.001))
+
+((improve val x) (/ (+ val (/ x val)) 2.0))
+
+((abs x) (if (>= x 0) x (- 0 x)))
+
+((square x) (* x x))
+
+((lineLength line) (squareRoot (+ (square (- (x (p2 line)) (x (p1 line))))
+                                  (square (- (y (p2 line)) (y (p1 line))))
+		               )
+		   )
+)
+
+((eqtest x) (= x x))
