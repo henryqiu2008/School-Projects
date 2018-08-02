@@ -1,0 +1,37 @@
+
+Class names and their field variables are displayed below.
+Duplicate class names are suffixed by duplicate numbers.
+
+Test=[]
+BinTree=[data, leftSubTree, rightSubTree]
+Pair=[first, second]
+Rectangle=[p1, p2]
+List=[data, tailList]
+Line=[p1, p2]
+Point=[x, y]
+
+Function names and their parameters are displayed below.
+Duplicate function names are suffixed by duplicate numbers.
+
+sqrtNewton=[val, x]
+squareRoot=[x]
+listLength=[list]
+eqtest=[x]
+exampleRectangle=[]
+max=[x, y]
+sumList=[list]
+exampleLine=[]
+lineLength=[line]
+improve=[val, x]
+exampleList=[]
+abs=[x]
+sumBinTree=[bt]
+closeEnough=[val, x]
+exampleBinTree=[]
+square=[x]
+binTreeHeight=[bt]
+buildList=[i]
+line1=[]
+line3=[]
+examplePair=[]
+line2=[]
